@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/joeyism/node-push-cli.git"
   },
+  "bin": {
+    "push": "index.js"
+  },
   "keywords": [
     "git",
     "push",
@@ -20,5 +23,16 @@
   "bugs": {
     "url": "https://github.com/joeyism/node-push-cli/issues"
   },
-  "homepage": "https://github.com/joeyism/node-push-cli#readme"
+  "homepage": "https://github.com/joeyism/node-push-cli#readme",
+  "dependencies": {
+    "colors": "^1.1.0",
+    "commit-cli": "^1.0.0",
+    "promise": "^7.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "istanbul": "^0.3.15",
+    "mocha": "^2.2.5",
+    "mockery": "^1.4.0"
+  }
 }
