@@ -1,4 +1,4 @@
-# Push-CLI
+# Push-CLI 
 
 A simple tool that allows you to push the code to current branch. The commands are the same as [commit-cli](https://github.com/joeyism/node-commit-cli/) except it pushes at the end as well.
 
