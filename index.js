@@ -12,7 +12,7 @@ commit.then(function(){
 
     }).then(function(branch){
 
-        console.log('Push to branch ' + branch.bold + 'successfully');
+        console.log('Push to branch ' + branch.bold + ' successfully');
 
     }).catch(function(err){
 
