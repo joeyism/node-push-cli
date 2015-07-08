@@ -1,6 +1,6 @@
 {
   "name": "push-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple CLI that adds, commits, and pushes into git",
   "main": "index.js",
   "scripts": {
