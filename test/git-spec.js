@@ -10,6 +10,19 @@ var fakeChild = function(error, result){
         }
     };
 };
+var fakeSpawn = function(error, result, cmd){
+    return {
+        spawn: function(){
+            return {
+                on: function(task, callback){
+                    if (cmd === task){
+                        callback();
+                    }
+                }
+            };
+        }
+    };
+};
 
 describe('git', function(){
 
@@ -67,7 +80,7 @@ describe('git', function(){
         });
 
         it('should successfully push', function(done){
-            mockery.registerMock('child_process', fakeChild(null, 'doesnt matter'));
+            mockery.registerMock('child_process', fakeSpawn(null, 'doesnt matter',"close"));
             git = require('../lib/git');
             git.push('branch').then(function(branch){
                 expect(branch).to.equal('branch');
@@ -76,10 +89,10 @@ describe('git', function(){
         });
 
         it('should throw an error if exec throws an error', function(done){
-            mockery.registerMock('child_process', fakeChild('error', 'doesnt matter'));
+            mockery.registerMock('child_process', fakeSpawn('error', 'doesnt matter',"error"));
             git = require('../lib/git');
             git.push('branch').catch(function(err){
-                expect(err).to.equal('error');
+                expect(err).to.be.undefined;
                 done();
             });
         });

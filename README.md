@@ -1,4 +1,4 @@
-# Push-CLI 
+# Push-CLI
 
 [![Build Status](https://travis-ci.org/joeyism/node-push-cli.svg)](https://travis-ci.org/joeyism/node-push-cli)
 
