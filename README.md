@@ -34,6 +34,8 @@ is the same as
     > push --all "feature/somefunction: added message"
 
 ### Version
+#### 1.0.2
+* Dependant on commit-cli v2.x.x
 
 #### 1.0.1
 * Fixed bug for exec. Using spawn instead
