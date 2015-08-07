@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 'use strict';
-var commit = require('commit-cli');
+var commit = require('commit-cli').commit;
 var git = require('./lib/git');
 require('colors');
 
-commit.then(function(){
+commit().then(function(){
 
     git.getCurrentBranch().then(function(branch){
 

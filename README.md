@@ -34,6 +34,7 @@ is the same as
     > push --all "feature/somefunction: added message"
 
 ### Version
+
 #### 1.0.1
 * Fixed bug for exec. Using spawn instead
 
